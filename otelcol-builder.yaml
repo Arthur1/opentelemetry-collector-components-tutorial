@@ -1,0 +1,14 @@
+dist:
+  module: github.com/Arthur1/opentelemetry-collector-components-tutorial
+  description: Custom OpenTelemetry Collector for Testing Sample Components
+  output_path: .
+  version: 0.1.0
+
+receivers:
+  - gomod: github.com/Arthur1/opentelemetry-collector-components-tutorial/receiver/samplereceiver v0.1.0
+
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.115.0
+
+replaces:
+  - github.com/Arthur1/opentelemetry-collector-components-tutorial/receiver/samplereceiver => ./receiver/samplereceiver
