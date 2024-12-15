@@ -1,0 +1,22 @@
+type: sample
+
+status:
+  class: receiver
+  stability:
+    development: [metrics]
+  codeowners:
+    active: [Arthur1]
+
+attributes:
+  sample.answerer.name:
+    type: string
+    description: Answerer Name
+
+metrics:
+  sample.ultimate_answer:
+    enabled: true
+    description: Ultimate Answer
+    unit: "1"
+    gauge:
+      value_type: double
+    attributes: [sample.answerer.name]
